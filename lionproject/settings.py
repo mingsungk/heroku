@@ -142,12 +142,12 @@ AWS_SECRET_ACCESS_KEY = os.environ.get('cN8nfZ8lmaj3f6JQNCxCOdg0w+9gaySTtQgODjwm
 AWS_STORAGE_BUCKET_NAME = 'likelion.django.lesson'
 AWS_S3_SIGNATURE_VERSION = 's3v4'
 AWS_S3_REGION_NAME = 'ap-northeast-2'
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
